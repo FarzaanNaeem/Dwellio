@@ -3,6 +3,7 @@ from uuid import uuid4
 
 from fastapi import APIRouter
 
+from app.api.feedback import preference_store
 from app.services.explanations import generate_explanation
 from app.services.listings import load_listings
 from app.services.ranking import rank_listings
@@ -31,6 +32,9 @@ def search_apartments(payload: dict) -> dict:
         }
 
     preferences = parse_query(query)
+    stored = preference_store.get(session_id, {"tags": set()})
+    preferences["tags"] = list(set(preferences.get("tags", [])) | stored["tags"])
+
     listings = load_listings()
     ranked_listings = rank_listings(preferences, listings)
 

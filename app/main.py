@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app import models
+from app.api.feedback import router as feedback_router
 from app.api.search import router as search_router
 from app.config import settings
 from app.db import Base, engine
@@ -18,6 +19,7 @@ app.add_middleware(
 )
 
 app.include_router(search_router)
+app.include_router(feedback_router)
 
 
 @app.on_event("startup")
