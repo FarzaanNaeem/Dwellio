@@ -1,0 +1,37 @@
+[
+  {
+    "id": "mock-001",
+    "price": 2800,
+    "bedrooms": 1,
+    "location": "Hoboken",
+    "tags": ["quiet", "near_path"]
+  },
+  {
+    "id": "mock-002",
+    "price": 3400,
+    "bedrooms": 2,
+    "location": "Jersey City",
+    "tags": ["near_path", "gym"]
+  },
+  {
+    "id": "mock-003",
+    "price": 2500,
+    "bedrooms": 1,
+    "location": "Astoria",
+    "tags": ["pet_friendly", "quiet"]
+  },
+  {
+    "id": "mock-004",
+    "price": 4100,
+    "bedrooms": 2,
+    "location": "Williamsburg",
+    "tags": ["rooftop", "near_subway"]
+  },
+  {
+    "id": "mock-005",
+    "price": 3100,
+    "bedrooms": 2,
+    "location": "Brooklyn Heights",
+    "tags": ["quiet", "near_subway"]
+  }
+]
